@@ -1,75 +1,55 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEditor;
 using UnityEngine;
-using UnityEditor;
 
-#if DEFAULT_INSPECTORS
-
-[CanEditMultipleObjects]
+// This script replaces the Playground Rigidbody2D Inspector to prevent NullReferenceExceptions
 [CustomEditor(typeof(Rigidbody2D))]
+[CanEditMultipleObjects]
 public class Rigidbody2DInspector : Editor
 {
-	private bool showConstraints = false;
+    SerializedProperty m_Mass;
+    SerializedProperty m_LinearDrag;
+    SerializedProperty m_AngularDrag;
+    SerializedProperty m_GravityScale;
+    SerializedProperty m_Interpolate;
+    SerializedProperty m_CollisionDetection;
+    SerializedProperty m_FreezeRotation;
 
-	public override void OnInspectorGUI()
-	{
-		serializedObject.Update();
+    void OnEnable()
+    {
+        m_Mass = serializedObject.FindProperty("m_Mass");
+        m_LinearDrag = serializedObject.FindProperty("m_LinearDrag");
+        m_AngularDrag = serializedObject.FindProperty("m_AngularDrag");
+        m_GravityScale = serializedObject.FindProperty("m_GravityScale");
+        m_Interpolate = serializedObject.FindProperty("m_Interpolation");
+        m_CollisionDetection = serializedObject.FindProperty("m_CollisionDetection");
+        m_FreezeRotation = serializedObject.FindProperty("m_FreezeRotation");
+    }
 
-		EditorGUILayout.Separator();
-		//EditorGUILayout.PropertyField(serializedObject.FindProperty("m_BodyType"));
-		//EditorGUILayout.LabelField("Physical Properties", EditorStyles.boldLabel);
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
 
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("m_Mass"));
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("m_LinearDrag"), new GUIContent("Friction"));
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("m_AngularDrag"), new GUIContent("Angular Friction"));
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("m_GravityScale"), new GUIContent("Gravity"));
-		EditorGUILayout.Separator();
-		
-		showConstraints = EditorGUILayout.Foldout(showConstraints, new GUIContent("Constraints"));
-		if(showConstraints)
-		{
-			if(Selection.gameObjects.Length == 1)
-			{
-				//retrieve checkbox values
-				RigidbodyConstraints2D constraints = (RigidbodyConstraints2D)serializedObject.FindProperty("m_Constraints").intValue;
-				RigidbodyConstraints2D oldConstraints = constraints;
-				bool xConstraint = (constraints & RigidbodyConstraints2D.FreezePositionX) != 0;
-				bool yConstraint = (constraints & RigidbodyConstraints2D.FreezePositionY) != 0;
-				bool rotConstraint = (constraints & RigidbodyConstraints2D.FreezeRotation) != 0;
+        if (m_Mass != null)
+            EditorGUILayout.PropertyField(m_Mass, new GUIContent("Mass"));
 
-				//draw the checkboxes
-				EditorGUI.indentLevel++;
-				EditorGUILayout.BeginHorizontal();
-				EditorGUILayout.PrefixLabel("Freeze Position");
-				xConstraint = GUILayout.Toggle(xConstraint, "X", GUILayout.ExpandWidth(false));
-				yConstraint = GUILayout.Toggle(yConstraint, "Y", GUILayout.ExpandWidth(false));
-				EditorGUILayout.EndHorizontal();
+        if (m_LinearDrag != null)
+            EditorGUILayout.PropertyField(m_LinearDrag, new GUIContent("Friction"));
 
-				EditorGUILayout.BeginHorizontal();
-				EditorGUILayout.PrefixLabel("Freeze Rotation");
-				rotConstraint = GUILayout.Toggle(rotConstraint, "Z");
-				EditorGUILayout.EndHorizontal();
-				EditorGUI.indentLevel--;
+        if (m_AngularDrag != null)
+            EditorGUILayout.PropertyField(m_AngularDrag, new GUIContent("Angular Drag"));
 
-				//convert the booleans into a flag
-				constraints = xConstraint ? RigidbodyConstraints2D.FreezePositionX : RigidbodyConstraints2D.None;
-				if(yConstraint) constraints |= RigidbodyConstraints2D.FreezePositionY;
-				if(rotConstraint) constraints |= RigidbodyConstraints2D.FreezeRotation;
-				
-				//write the property back
-				if(oldConstraints != constraints)
-				{
-					serializedObject.FindProperty("m_Constraints").intValue = (int)constraints;
-				}
-			}
-			else
-			{
-				EditorGUILayout.HelpBox("Select one GameObject at a time to modify constraints", MessageType.Warning);
-			}
-		}
+        if (m_GravityScale != null)
+            EditorGUILayout.PropertyField(m_GravityScale, new GUIContent("Gravity Scale"));
 
-		serializedObject.ApplyModifiedProperties();
-	}
+        if (m_Interpolate != null)
+            EditorGUILayout.PropertyField(m_Interpolate, new GUIContent("Interpolate"));
+
+        if (m_CollisionDetection != null)
+            EditorGUILayout.PropertyField(m_CollisionDetection, new GUIContent("Collision Detection"));
+
+        if (m_FreezeRotation != null)
+            EditorGUILayout.PropertyField(m_FreezeRotation, new GUIContent("Freeze Rotation"));
+
+        serializedObject.ApplyModifiedProperties();
+    }
 }
-
-#endif
