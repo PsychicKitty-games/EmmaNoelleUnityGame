@@ -535,6 +535,32 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3687448331331670132, guid: ff2dfa0c9fa1b4449b52cb8fdda63eef,
+        type: 3}
+      propertyPath: keyToPress
+      value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: -3687448331331670132, guid: ff2dfa0c9fa1b4449b52cb8fdda63eef,
+        type: 3}
+      propertyPath: prefabToSpawn
+      value: 
+      objectReference: {fileID: 6301545004939894331, guid: 30afe0a54e4f34654b1011850015a292,
+        type: 3}
+    - target: {fileID: -3687448331331670132, guid: ff2dfa0c9fa1b4449b52cb8fdda63eef,
+        type: 3}
+      propertyPath: shootDirection.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3687448331331670132, guid: ff2dfa0c9fa1b4449b52cb8fdda63eef,
+        type: 3}
+      propertyPath: shootDirection.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3687448331331670132, guid: ff2dfa0c9fa1b4449b52cb8fdda63eef,
+        type: 3}
+      propertyPath: relativeToRotation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2216594531874911051, guid: ff2dfa0c9fa1b4449b52cb8fdda63eef,
         type: 3}
       propertyPath: m_Name

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6056363347311729620}
   - component: {fileID: 2040073958694788537}
   - component: {fileID: 6271465546027098401}
+  - component: {fileID: -3687448331331670132}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -200,3 +201,21 @@ MonoBehaviour:
   jumpStrength: 20
   groundTag: Ground
   checkGround: 1
+--- !u!114 &-3687448331331670132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2216594531874911051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc51b070fa9284f41beaf009c194f0bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 0}
+  keyToPress: 122
+  creationRate: 0.5
+  shootSpeed: 5
+  shootDirection: {x: 1, y: 1}
+  relativeToRotation: 1
