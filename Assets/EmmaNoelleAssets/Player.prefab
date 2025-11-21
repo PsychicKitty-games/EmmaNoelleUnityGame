@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 0}
-  typeOfControl: 0
+  typeOfControl: 1
   speed: 5
   movementType: 1
   orientToDirection: 1
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 0}
   key: 32
-  jumpStrength: 20
+  jumpStrength: 25
   groundTag: Ground
   checkGround: 1
 --- !u!114 &-3687448331331670132
@@ -213,8 +213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc51b070fa9284f41beaf009c194f0bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 0}
-  keyToPress: 122
+  prefabToSpawn: {fileID: 6301545004939894331, guid: 30afe0a54e4f34654b1011850015a292,
+    type: 3}
+  keyToPress: 13
   creationRate: 0.5
   shootSpeed: 5
   shootDirection: {x: 1, y: 1}
