@@ -336,6 +336,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossRoomPlatformUnderside (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2668268748967836672, guid: 799fd4694f67048358530ca4ee768d37,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8536622827427136568, guid: 799fd4694f67048358530ca4ee768d37,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -549,7 +554,7 @@ PrefabInstance:
     - target: {fileID: -3687448331331670132, guid: ff2dfa0c9fa1b4449b52cb8fdda63eef,
         type: 3}
       propertyPath: shootDirection.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3687448331331670132, guid: ff2dfa0c9fa1b4449b52cb8fdda63eef,
         type: 3}
@@ -559,7 +564,7 @@ PrefabInstance:
     - target: {fileID: -3687448331331670132, guid: ff2dfa0c9fa1b4449b52cb8fdda63eef,
         type: 3}
       propertyPath: relativeToRotation
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2216594531874911051, guid: ff2dfa0c9fa1b4449b52cb8fdda63eef,
         type: 3}
