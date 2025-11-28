@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7389143799042982816}
   - component: {fileID: 837956888192990244}
   - component: {fileID: 1980925983241427107}
-  - component: {fileID: 3925459479407273710}
   - component: {fileID: 616674847483142672}
   - component: {fileID: 8925533766984630115}
   - component: {fileID: 4975060997057405289}
+  - component: {fileID: 7530948656250973557}
   m_Layer: 0
   m_Name: BossBullet
   m_TagString: Untagged
@@ -108,7 +108,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -120,23 +120,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3925459479407273710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5481437096745438975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4330d34abf50140d5bad3d3b0608cca2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidbody2D: {fileID: 0}
-  target: {fileID: 3446995716837933517, guid: ff2dfa0c9fa1b4449b52cb8fdda63eef, type: 3}
-  speed: 5
-  lookAtTarget: 1
-  useSide: 0
 --- !u!114 &616674847483142672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,3 +183,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &7530948656250973557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5481437096745438975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f0bfabf363d4ec5993fbd4f9908ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody2D: {fileID: 0}
+  direction: {x: 0, y: -5}
+  relativeToRotation: 0
