@@ -24,13 +24,16 @@ EditorBuildSettings:
     path: Assets/UnityTechnologies/Playground/Examples/Roguelike/Roguelike.unity
     guid: ad15a26015e49439387b05c22fe7a962
   - enabled: 1
+    path: Assets/Scenes/StartScreenEmma.unity
+    guid: 0813528519d624216a9a379ef12c99a9
+  - enabled: 1
+    path: Assets/Scenes/Chapel.unity
+    guid: 5b0dd47c5fc6aaa4ab82d7f72c7a9e86
+  - enabled: 1
     path: Assets/Scenes/BossRoom.unity
     guid: 0e0da1ba1b62140c382c5e1c6b3596eb
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/StartScreenEmma.unity
-    guid: 0813528519d624216a9a379ef12c99a9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

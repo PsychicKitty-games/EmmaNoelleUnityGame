@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6452473905797549088}
   - component: {fileID: 2475966091019733375}
   - component: {fileID: 6029616419503774775}
+  - component: {fileID: 788175637585123009}
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.751, y: 7.389, z: 0}
-  m_LocalScale: {x: 0.5850132, y: 0.5595, z: 0.5595}
+  m_LocalScale: {x: 0.24373992, y: 0.23311009, z: 0.23311009}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,8 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 810ce5a8a90e54eae837c6c5ad4bb98e, type: 3}
   m_Color: {r: 1, g: 0.7583035, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -134,7 +134,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -152,8 +152,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0131707005, y: 0.00000038782014}
-  m_Size: {x: 0.57769275, y: 0.35565364}
+  m_Offset: {x: 0.000694621, y: -0.0048255688}
+  m_Size: {x: 1.2829646, y: 1.2738285}
   m_Direction: 1
 --- !u!114 &6029616419503774775
 MonoBehaviour:
@@ -168,3 +168,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestruction: 10
+--- !u!114 &788175637585123009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6301545004939894331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa3c260db47248a18ecb8112019040d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyWhenActivated: 1
+  healthChange: -1

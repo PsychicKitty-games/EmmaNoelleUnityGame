@@ -13,10 +13,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - DamageBoss
   - Water
   - UI
-  - 
+  - DamagePlayer
   - 
   - 
   - 
@@ -45,6 +45,12 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 145232093
+    locked: 0
+  - name: BossBullets
+    uniqueID: 4170721507
+    locked: 0
+  - name: PlayerBullets
+    uniqueID: 1233897101
     locked: 0
   - name: Default
     uniqueID: 0
