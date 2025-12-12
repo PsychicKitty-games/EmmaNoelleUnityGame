@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5398826522478325895}
   - component: {fileID: 3510215727264482985}
   - component: {fileID: 951177242086316160}
-  - component: {fileID: 439514474868131314}
   m_Layer: 0
   m_Name: BossDoor
   m_TagString: Untagged
@@ -204,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 439514474868131314}
+  - {fileID: 0}
   useCustomActions: 0
   customActions:
     m_PersistentCalls:
@@ -214,23 +213,3 @@ MonoBehaviour:
   filterTag: Player
   frequency: 1
   eventType: 0
---- !u!114 &439514474868131314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561224645336311892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9117653835b354259a0c03ce702840f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textToDisplay: Find 3 keys
-  backgroundColor: {r: 0.99607843, g: 0.99607843, b: 0.99607843, a: 1}
-  textColor: {r: 0, g: 0, b: 0, a: 1}
-  targetObject: {fileID: 7685463311697765992}
-  disappearMode: 0
-  timeToDisappear: 5
-  keyToPress: 13
-  followingText: {fileID: 0}

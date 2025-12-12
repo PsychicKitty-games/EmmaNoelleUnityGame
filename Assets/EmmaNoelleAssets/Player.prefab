@@ -155,7 +155,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2.8
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 4
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 0}
   typeOfControl: 1
-  speed: 5
+  speed: 8.5
   movementType: 1
   orientToDirection: 1
   lookAxis: 1
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 0}
   key: 119
-  jumpStrength: 25
+  jumpStrength: 70
   groundTag: Ground
   checkGround: 1
 --- !u!114 &-3687448331331670132
